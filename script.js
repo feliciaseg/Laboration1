@@ -12,27 +12,35 @@ function stepOne() {
         //Väljer dörr 2
         alert ("Innanför dörren finns en haj som slukar dig hel. The End.");
     }
-    else if (chooseDoor ==2)  {
+    else if (chooseDoor ==3)  {
         stepTwo()
-    } else {
+    } 
+    else {
         alert('felaktigtsvar.....')
         stepOne()
     }
 }
 
-
+function stepTwo ()
     //Väljer dörr 3
     alert ("Du kommer in i ett kolsvart rum.")
 
-    let lightSwitch = prompt("Vill du tända lampan? ja eller nej?");  
-    if (lightSwitch == "nej") {
+    let lightSwitch = prompt("Vill du tända lampan? Ja eller nej?");  
+    if (lightSwitch == "nej", "Nej") {
         alert ("Du förlitar dig på ditt mörkerseende, som tyvärr inte är så bra. Du tar ett steg in i rummet, snubblar över en tegelsten och slår huvudet i en annan tegelsten. Du dör på fläcken. The End.");
     }
-    else if(lightSwitch == "ja") {
+    else if(lightSwitch == "ja", "Ja") {
         alert ("Du hittar lampknappen på höger sida av dörren och tänder lampan. Rummet är fullt av tegelstenar, men längst in står också en liten liten ponny.");
-       
-        let petPony = prompt ("Vill du klappa ponnyn?");
-        if (petPony == "nej") {
+        stepThree()
+    }
+    else {
+        alert("Felaktigt svar...")
+        stepTwo()
+    }
+
+function stepThree ()
+    let petPony = prompt ("Vill du klappa ponnyn?");
+    if (petPony == "nej", "Nej") {
             alert ("Du står kvar på behörigt avstånd och tittar på ponnyn." )
         }
         // Valen över och under leder båda till nästa fråga........
