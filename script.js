@@ -16,12 +16,12 @@ function stepOne() {
         stepTwo()
     } 
     else {
-        alert('felaktigtsvar.....')
+        alert('Felaktigt svar, försök igen!')
         stepOne()
     }
 }
 
-function stepTwo ()
+function stepTwo () {
     //Väljer dörr 3
     alert ("Du kommer in i ett kolsvart rum.")
 
@@ -34,43 +34,77 @@ function stepTwo ()
         stepThree()
     }
     else {
-        alert("Felaktigt svar...")
+        alert("Felaktigt svar, försök igen!")
         stepTwo()
-    }
-
-function stepThree ()
-    let petPony = prompt ("Vill du klappa ponnyn?");
-    if (petPony == "nej", "Nej") {
-            alert ("Du står kvar på behörigt avstånd och tittar på ponnyn." )
-        }
-        // Valen över och under leder båda till nästa fråga........
-        else if (petPony == "ja") {
-            alert (" Du går fram och klappar ponnyn. Det känns mysigt.")
-        }
-
-        let wannaLeave = prompt("Vill du lämna rummet?")
-        if (wannaLeave == "ja") {
-            alert ("Du bestämmer dig för att lämna det konstiga rummet. Precis när du ska gå hör du ett gnäggande....")
-        }
-        
-        else {
-            alert("Ponnyn blir irriterad av att du nu bara stått och stirrat på den i 40 min och attackerar dig. Du dör. The End.")
-        }
-        //Avsluta och Play Again??
-    
-
-
-        let bringPony = prompt ("Vill du ta med dig ponnyn ur rummet?")
-        if (bringPony == "ja" ) {
-            alert ("Du tar med dig ponnyn ut ur rummet. Sekunden efter ni kommit ut exploderar hela rummet. Ni klarade er!")
-        }
-        else {
-            alert ("Du går ut ur rummet och lämnar den gnäggande ponnyn pakom dig. När du kommer ut exploderar hela rummet, och ponnyn med det. Du klarade dig.... men till vilket pris?😰 🐴")
-        }
-
-
-       
     }
 }
 
+function stepThree () {
+    let petPony = prompt ("Vill du klappa ponnyn?");
+    if (petPony == "nej", "Nej") {
+            alert ("Du står kvar på behörigt avstånd och tittar på ponnyn." )
+            stepFour ()
+        }
+      
+        else if (petPony == "ja", "Ja") {
+            alert (" Du går fram och klappar ponnyn. Det känns mysigt.")
+            stepFour ()
+        }
+        
+        else {
+        alert("Felaktigt svar, försök igen!")
+        stepThree()
+        }
+
+    }
+
+function stepFour () {
+        let wannaLeave = prompt("Vill du lämna rummet?")
+        if (wannaLeave == "ja", "Ja") {
+            alert ("Du bestämmer dig för att lämna det konstiga rummet. Precis när du ska gå hör du ett gnäggande....")
+            stepFive()
+        }
+        
+        else if (wannaLeave == "ja", "Ja") {
+            alert("Ponnyn blir irriterad av att du nu bara stått och stirrat på den i 40 min och attackerar dig. Du dör. The End.")
+        }
+
+        else {
+            alert("Felaktigt svar, försök igen!")
+            stepFour()
+        }
+        //Avsluta och Play Again??
+    }
+
+
+function stepFive () {
+        let bringPony = prompt ("Vill du ta med dig ponnyn ur rummet?")
+        if (bringPony == "ja", "Ja" ) {
+            alert ("Du tar med dig ponnyn ut ur rummet. Sekunden efter ni kommit ut exploderar hela rummet. Ni klarade er! 🥇 👫 ❤️ 🐴 ")
+        }
+        else if (bringPony== "nej", "Nej")   {
+            alert ("Du går ut ur rummet och lämnar den gnäggande ponnyn pakom dig. När du kommer ut exploderar hela rummet, och ponnyn med det. Du klarade dig.... men till vilket pris? 🥇 😰  💔 🐴 ")
+        }
+
+        else {
+            alert ("Felaktigt svar, försök igen!")
+            stepFive ()
+        }
+
+
+    }
+
+       
+    function playAgain() {
+    let playAgain = prompt ("Vill du spela igen?")
+    
+    if (playAgain = "ja", "Ja") {
+        stepOne()
+    }
+    if (playAgain = "nej", "Nej") {
+        alert ("Tack för att du spela!")
+    }
+
+
+}
     
