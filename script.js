@@ -86,7 +86,7 @@ function stepFive () {
         restartGame();
     }
     else if (bringPony == "nej") {
-        alert ("Du går ut ur rummet och lämnar den gnäggande ponnyn pakom dig. När du kommer ut exploderar hela rummet, och ponnyn med det. Du klarade dig.... men till vilket pris? 🥇 😰  💔 🐴 ");
+        alert ("Du går ut ur rummet och lämnar den gnäggande ponnyn bakom dig. När du kommer ut exploderar hela rummet, och ponnyn med det. Du klarade dig.... men till vilket pris? 🥇 😰  💔 🐴 ");
         restartGame();
     }
     else {
